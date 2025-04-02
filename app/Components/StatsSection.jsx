@@ -71,7 +71,7 @@ const Counter = ({ value, suffix }) => {
 
 const StatsSection = () => {
   return (
-    <div className="mt-20 lg:mt-30 border-2 md:py-5 border-dashed border-[var(--color-purple)] mx-auto grid grid-cols-2 md:grid-cols-3 md:gap-10 text-center">
+    <div className="mt-10 lg:mt-15 border-2 md:py-5 border-dashed border-[var(--color-purple)] mx-auto grid grid-cols-2 md:grid-cols-3 md:gap-10 text-center">
       {stats.map((stat, index, arr) => (
         <div
           key={stat.id}

@@ -83,7 +83,7 @@ const page = () => {
           ))}
         </div>
         <form
-          className="md:w-[90vw] lg:w-[60vw] flex flex-col gap-3"
+          className="w-full md:w-[90vw] lg:w-[60vw] flex flex-col gap-3"
           onSubmit={(e) => e.preventDefault()}
         >
           {groupedFields.map((pair, i) => (

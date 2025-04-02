@@ -94,7 +94,7 @@ const WorkCards = () => {
 
           <h4
             style={{ zIndex: index + 1 }}
-            className={`font-[Boldonse] absolute stroke text-[var(--coloroff-white)] !pointer-events-none font-bold text-nowrap text-[6vw] ${
+            className={`font-[Boldonse] absolute stroke text-[var(--coloroff-white)] !pointer-events-none font-bold text-nowrap text-3xl md:text-[6vw] ${
               index % 2 === 0
                 ? "left-1/2 md:left-full -translate-x-1/2"
                 : "left-1/2 md:left-[unset] md:right-full -translate-x-1/2 md:translate-x-1/2"
