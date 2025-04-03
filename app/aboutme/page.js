@@ -96,21 +96,22 @@ const page = () => {
 
   return (
     <main className="w-full h-full bg-[var(--bgcolor)] pt-20 md:pt-15">
-        <PageHeading text="The Story Behind the Code" />
+      <PageHeading text="The Story Behind the Code" />
       <div className="bg-[var(--coloroff-white)] w-full h-full mt-15 px-5 md:px-8 rounded-t-2xl md:rounded-t-4xl pt-10 pb-10 md:pb-30">
         {sections.map((section, index) => (
-          <section key={index} className={`${index == 0 ? "mt-0" : "mt-10"}`}>
+          <section key={index} className={`${index === 0 ? "mt-0" : "mt-10"}`}>
             <h3
-              className={`text-lg md:text-2xl font-bold  ${
-                index == 0 ? "mt-0" : "mt-5"
+              className={`text-lg md:text-2xl font-bold ${
+                index === 0 ? "mt-0" : "mt-5"
               }`}
             >
               {section.title}
             </h3>
             {section.paragraphs.map((para, i) => (
-              <p key={i} className="text-sm md:text-base mt-3">
+              // ✅ Hydration Error FIX: Changed <p> to <div> to avoid <ul> inside <p>
+              <div key={i} className="text-sm md:text-base mt-3">
                 {para}
-              </p>
+              </div>
             ))}
           </section>
         ))}

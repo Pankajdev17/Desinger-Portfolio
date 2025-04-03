@@ -105,8 +105,8 @@ const WorkCards = () => {
                 <motion.span
                   key={ind}
                   className="inline-block whitespace-pre"
-                  initial={{ y: 200 }}
-                  animate={{ y: hoverStates[index].isHovering ? 0 : 200 }}
+                  initial={{ y: 280 }}
+                  animate={{ y: hoverStates[index].isHovering ? 0 : 280 }}
                   transition={{
                     duration: 0.35,
                     ease: [0.83, 0, 0.17, 1],

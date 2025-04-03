@@ -17,7 +17,7 @@ const Work = () => {
                     className="group-active:-rotate-45 group-hover:-rotate-45 duration-150"
                     size={28}
                   />
-        </Link>
+      </Link>
     </div>
   );
 };

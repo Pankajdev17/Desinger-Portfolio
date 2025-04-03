@@ -5,6 +5,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Headset, LocateFixed, Mail, SendHorizontal } from "lucide-react";
 import LoadingSpinner from "../Components/LoadingSpinner";
 import Link from "next/link";
+import { handleContactForm } from "../form";
+import { ToastContainer } from "react-toastify";
 
 const page = () => {
   const [isSending, setSending] = useState(false);
@@ -47,6 +49,7 @@ const page = () => {
 
   return (
     <main className="w-full bg-[var(--bgcolor)] pt-20 md:pt-15">
+      <ToastContainer theme="dark" />
       <PageHeading
         text="Got an Idea? Let’s Build It"
         color="text-[var(--color-purple)]"
@@ -57,8 +60,8 @@ const page = () => {
             {
               text: "Email:",
               icon: Mail,
-              para: "pankajtechno17@gmail.com",
-              link:'mailto:pankajtechno17@gmail.com'
+              para: "roji.sharma1968@gmail.com",
+              link:'mailto:roji.sharma1968@gmail.com'
             },
             {
               text: "Location:",
@@ -84,7 +87,7 @@ const page = () => {
         </div>
         <form
           className="w-full md:w-[90vw] lg:w-[60vw] flex flex-col gap-3"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => handleContactForm(e, setSending, recaptchaRef)}
         >
           {groupedFields.map((pair, i) => (
             <div key={`pair${i}`} className="grid md:grid-cols-2 gap-4 w-full">

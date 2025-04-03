@@ -135,7 +135,7 @@ const ProjectMenu = () => {
             ref={(el) => (sectionsRef.current[tech.workheading] = el)}
             className={`px-3 ${`z-[${
               index + 1
-            }]`} md:px-8 pt-8 border-t-[1px] rounded-tl-3xl rounded-tr-3xl ${
+            }]`} md:px-8 pt-8 border-t-[1px] border-[var(--coloroff-white)] rounded-tl-3xl rounded-tr-3xl ${
               index === 0 ? "translate-y-0 pb-10" : "-translate-y-5 pb-10"
             }`}
           >

@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 
 const labels = [
   {
-    text: "I’m Pankaj",
-    className: "font-[Boldonse] text-base md:text-2xl absolute top-28 left-10 md:left-[20%] md:top-[16.666%] py-2 md:py-3",
+    text: "I’m Roji",
+    className: "font-[Boldonse] text-base md:text-2xl absolute top-[30%] left-8 md:left-[7.5%] md:top-[28%] py-2 md:py-3",
   },
   {
-    text: "Portfolio",
+    text: "Problem Solving",
     className: "text-base absolute left-5 md:left-10 top-5 md:top-10 py-1",
   },
   {
