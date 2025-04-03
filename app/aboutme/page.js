@@ -4,99 +4,44 @@ import PageHeading from "../Components/PageHeading";
 const page = () => {
   const sections = [
     {
-      title: "Full-Stack Development Expertise",
+      title: "Frontend Development Perfection",
       paragraphs: [
         <>
-          With <span className="font-bold">6 years of hands-on experience</span>{" "}
-          in designing and developing dynamic, high-performance web
-          applications, I have honed my skills as a{" "}
-          <span className="font-bold">Full-Stack Developer</span>. My expertise
-          spans both{" "}
-          <span className="font-bold">client-side and server-side</span>{" "}
-          technologies, including{" "}
-          <span className="font-bold">
-            React, Next.js, Laravel, CodeIgniter, and Node.js
-          </span>
-          .
+          I have <span className="font-bold">10 years of experience</span> in frontend development, I specialize in creating visually stunning yet highly functional web interfaces. My strengths span a wide range of technologies like <span className="font-bold">JavaScript, React, WordPress, WooCommerce, Shopify, Wix, and Tailwind CSS</span>. My passion basically revolves around developing websites that are user-friendly and performance-driven rather than just looking good.
         </>,
         <>
-          From crafting seamless UI/UX experiences using{" "}
-          <span className="font-bold">
-            Tailwind, Bootstrap, and modern JavaScript frameworks
-          </span>
-          , to building{" "}
-          <span className="font-bold">scalable backend solutions</span> with{" "}
-          <span className="font-bold">
-            MySQL, PostgreSQL, MongoDB, and Firebase
-          </span>
-          , I ensure that every project is optimized for{" "}
-          <span className="font-bold">speed, security, and scalability</span>.
+          A meticulous approach comes into my work for frontend development, whether creating custom themes and plugins, enhancements regarding performance, or accessibility of websites. It applies the same even if the project is that I'm working on right now--improving on an existing site or creating one right from scratch- keeping in mind the industry's best practice and standards.
         </>,
       ],
     },
     {
-      title: "Custom Solutions Across Multiple Platforms",
+      title: "Tailored Solutions over Platforms",
       paragraphs: [
         <>
-          My versatility extends to CMS platforms like{" "}
-          <span className="font-bold">
-            WordPress, Shopify, Webflow, and Squarespace
-          </span>
-          , where I build tailored solutions that align with business needs.
-          With deep knowledge of{" "}
-          <span className="font-bold">
-            API development, cloud services, and version control systems (Git,
-            Bitbucket)
-          </span>
-          , I ensure that every project is built with{" "}
-          <span className="font-bold">
-            modern standards and peak performance
-          </span>{" "}
-          in mind.
+          It is not only the custom frontend development that I'm good at. I have spent a good amount of time with <span className="font-bold">CMS platforms such as WordPress, Shopify, Wix, and Squarespace</span>, making modifications in building solutions along the business lines for the organizations. Building a custom eCommerce store, conversions centric website enhancements, API integration with third parties, are just some of the things that I do to innovate high-performance solutions.
         </>,
         <>
-          Whether it’s custom eCommerce platforms, SaaS applications, or
-          subscription-based services, I focus on delivering user-centric,
-          future-proof solutions that elevate digital experiences.
+          Having a good hold on <span className="font-bold">SEO best practices, responsive designs, and modern UI/UX principles</span>, I deliver the digital world experience driving engagement and success. I utilize it for a small business site or a large-scale web application that maintains emphasis on clean code, scalability, and long-term maintainability.
         </>,
       ],
     },
     {
-      title: "Innovation & Excellence in Every Project",
+      title: "Delivering Innovation & Excellence",
       paragraphs: [
         <>
-          Over the years, I have worked on diverse projects, from{" "}
-          <span className="font-bold">
-            real estate portals and fintech applications to AI-driven software
-            and e-marketplaces
-          </span>
-          . I thrive on solving complex challenges through{" "}
-          <span className="font-bold">
-            cutting-edge technologies and creative problem-solving
-          </span>
-          .
+          Over a decade now, I have developed a successful portfolios of over a <span className="font-bold">hundred projects</span> across diverse industries, including finance, eCommerce, health, and education. I savor solving the most complex technical challenges to push forward what's possible in web development today through modern technologies.
         </>,
         <>
-          With a keen eye for detail and a passion for innovation, I stay ahead
-          of modern trends, pushing the boundaries of what’s possible in web
-          development. My commitment to{" "}
-          <span className="font-bold">
-            excellence, adaptability, and reliability
-          </span>{" "}
-          ensures that every project I undertake not only meets industry
-          benchmarks but{" "}
-          <span className="font-bold">
-            sets new standards in digital innovation
-          </span>
-          .
+          Excellence, adaptability, and learning define my personality, and all these make sure that everything I do is of the highest quality. Regular updates on trends and technology changes help provide cutting-edge solutions that enhance digital experience and will be a real difference creator.
         </>,
       ],
     },
   ];
+  
 
   return (
     <main className="w-full h-full bg-[var(--bgcolor)] pt-20 md:pt-15">
-      <PageHeading text="The Story Behind the Code" />
+      <PageHeading text="The Story Behind Roji" />
       <div className="bg-[var(--coloroff-white)] w-full h-full mt-15 px-5 md:px-8 rounded-t-2xl md:rounded-t-4xl pt-10 pb-10 md:pb-30">
         {sections.map((section, index) => (
           <section key={index} className={`${index === 0 ? "mt-0" : "mt-10"}`}>
@@ -108,7 +53,6 @@ const page = () => {
               {section.title}
             </h3>
             {section.paragraphs.map((para, i) => (
-              // ✅ Hydration Error FIX: Changed <p> to <div> to avoid <ul> inside <p>
               <div key={i} className="text-sm md:text-base mt-3">
                 {para}
               </div>

@@ -7,7 +7,7 @@ import { motion, useAnimation } from "motion/react";
 const Skills = () => {
   const constraintRef = useRef(null);
   const timeoutRef = useRef(null);
-  const hasMounted = useRef(false); // 🔒 Track mount status
+  const hasMounted = useRef(false); 
 
   const skillIcons = [
     "figmalogo.svg",
