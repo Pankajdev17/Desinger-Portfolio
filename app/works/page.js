@@ -139,7 +139,7 @@ const ProjectMenu = () => {
               index === 0 ? "translate-y-0 pb-10" : "-translate-y-5 pb-10"
             }`}
           >
-            <h2 className="text-center font-[Boldonse] tracking-wide lg:text-left text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-center font-[Boldonse] tracking-wide lg:text-left text-3xl md:text-4xl mb-12 font-bold text-white">
               {tech.workheading}
             </h2>
             <div className="gap-5 grid lg:grid-cols-2 mt-6">
@@ -161,9 +161,13 @@ const ProjectMenu = () => {
                         className="w-full h-full object-cover"
                       />
                       <div className="opacity-0 duration-250 flex items-end px-5 py-5 group-hover:opacity-100 absolute left-0 top-0 w-full h-full bg-linear-to-b from-white/10 to-[var(--bgcolor)] z-[2]">
-                        <p className="text-sm md:text-base text-white">
+                      {project.projectdescription ? 
+                        (<p className="text-sm md:text-base text-white">
                           {project.projectdescription}
-                        </p>
+                        </p>) : (
+                        <button className="text-sm bg-[var(--color-purple)] px-2 py-2 rounded-lg md:text-base text-white">
+                          Preview Design in Figma</button>)
+                        }
                       </div>
                     </div>
                   </Link>

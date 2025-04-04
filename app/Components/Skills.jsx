@@ -2,12 +2,12 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import { motion, useAnimation } from "motion/react";
+import { motion, useAnimation } from "framer-motion"; // MotionOne se Framer Motion pe shift kiya
 
 const Skills = () => {
   const constraintRef = useRef(null);
   const timeoutRef = useRef(null);
-  const hasMounted = useRef(false); 
+  const hasMounted = useRef(false);
 
   const skillIcons = [
     "figmalogo.svg",
@@ -17,7 +17,11 @@ const Skills = () => {
     "css.svg",
     "tailwindcss.svg",
     "javascript.svg",
-    "reactjs.svg",
+    "Shopify.svg",
+    "wordpress.svg",
+    "github.svg",
+    "NextJs.svg",
+    "woocommerce.svg",
   ];
 
   const [draggingSet, setDraggingSet] = useState(new Set());
@@ -28,7 +32,7 @@ const Skills = () => {
 
     if (draggingSet.size === 0) {
       timeoutRef.current = setTimeout(() => {
-        if (!hasMounted.current) return; // 🔐 Only animate if mounted
+        if (!hasMounted.current) return;
 
         controlsArray.current.forEach((controls) =>
           controls.start({
@@ -62,17 +66,14 @@ const Skills = () => {
     startResetTimer();
   }, [draggingSet]);
 
-  // ✅ Mount status tracker + cleanup
   useEffect(() => {
     hasMounted.current = true;
-
     return () => {
       hasMounted.current = false;
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
 
-  // ✅ Handle window resize animations safely
   useEffect(() => {
     const handleResize = () => {
       if (!hasMounted.current) return;
@@ -89,11 +90,6 @@ const Skills = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const midpoint = Math.ceil(skillIcons.length / 2);
-  const row1 = skillIcons.slice(0, midpoint);
-  const row2 = skillIcons.slice(midpoint);
-  const rows = [row1, row2];
-
   return (
     <div
       ref={constraintRef}
@@ -103,43 +99,32 @@ const Skills = () => {
         Crafted With These Tools
       </h2>
 
-      <table className="w-full md:w-fit md:table-fixed md:mx-auto border-collapse text-white mt-8 pointer-events-none">
-        <tbody>
-          {rows.map((row, rowIndex) => (
-            <tr key={rowIndex} className="grid grid-cols-2 md:table-row">
-              {row.map((icon, colIndex) => {
-                const index = rowIndex * midpoint + colIndex;
-                return (
-                  <td
-                    key={colIndex}
-                    className="border md:border-2 border-dashed flex justify-center md:table-cell border-[var(--color-purple)] py-3 w-full md:px-8"
-                  >
-                    <motion.div
-                      drag
-                      dragConstraints={constraintRef}
-                      dragElastic={0.5}
-                      onDragStart={() => handleDragStart(index)}
-                      onDragEnd={() => handleDragEnd(index)}
-                      animate={controlsArray.current[index]}
-                      whileDrag={{ scale: 1.1, zIndex: 10 }}
-                      className="w-24 h-24 flex items-center px-3 justify-center bg-white border border-dashed border-[var(--color-purple)] rounded-lg cursor-grab active:cursor-grabbing pointer-events-auto"
-                      style={{ touchAction: "none" }}
-                    >
-                      <Image
-                        src={`/images/${icon}`}
-                        alt={icon}
-                        width={60}
-                        height={60}
-                        className="object-contain size-auto pointer-events-none"
-                      />
-                    </motion.div>
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div
+        className="w-full md:w-fit grid grid-cols-3 sm:grid-cols-6 gap-5 justify-center border border-[var(--color-purple)] border-dashed mx-auto mt-5 px-5 py-5"
+      >
+        {skillIcons.map((icon, index) => (
+          <motion.div
+            key={icon}
+            drag
+            dragConstraints={constraintRef}
+            dragElastic={0.5}
+            onDragStart={() => handleDragStart(index)}
+            onDragEnd={() => handleDragEnd(index)}
+            animate={controlsArray.current[index]}
+            whileDrag={{ scale: 1.1, zIndex: 10 }}
+            className="size-full sm:size-20 md:size-24 py-3 flex items-center pointer-events-auto px-3 justify-center bg-white border border-dashed border-[var(--color-purple)] rounded-lg cursor-grab"
+            style={{ touchAction: "none" }}
+          >
+            <Image
+              src={`/images/${icon}`}
+              alt={icon}
+              width={60}
+              height={60}
+              className="object-contain size-auto pointer-events-none"
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };

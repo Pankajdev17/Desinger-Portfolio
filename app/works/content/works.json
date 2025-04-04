@@ -108,6 +108,18 @@
     "workheading": "Wordpress",
     "projects": [
       {
+        "projectname": "LivWell Vietnam",
+        "projectdescription": "A wellness and fitness platform in Vietnam that rewards users for staying active through challenges and health-tracking incentives.",
+        "projecturl": "https://www.livwell.vn/",
+        "projectimage": "/images/websites/livwell.webp"
+      },          
+      {
+        "projectname": "Trekkers Paradise Nepal",
+        "projectdescription": "A leading trekking and adventure tour company in Nepal, offering guided treks, expeditions, and cultural tours across the Himalayas.",
+        "projecturl": "https://trekkersparadisenepal.com/",
+        "projectimage": "/images/websites/trekkers.webp"
+      },      
+      {
         "projectname": "Hiring-Hub",
         "projectdescription": "An online recruitment platform connecting employers with independent recruiters to simplify the hiring process.",
         "projecturl": "https://www.hiring-hub.com/",
@@ -142,6 +154,56 @@
         "projectdescription": "ManageWP provides an all-in-one WordPress management platform for site updates, security, and performance optimization.",
         "projecturl": "https://managewp.com/",
         "projectimage": "/images/websites/managewp.webp"
+      }
+    ]
+  },
+  {
+    "workheading": "Figma Designs",
+    "projects": [
+      {
+        "projectname": "Autofintech Design",
+        "projecturl": "https://www.figma.com/proto/xTuqd0IDYuynhxU4HUebR5/Auto-Finance?type=design&node-id=27-2702&t=SbB6hMXb6usfPlsq-1&scaling=scale-down-width&page-id=0%3A1",
+        "projectimage": "/images/websites/autofintech.webp"
+      },
+      {
+        "projectname": "Aerokone Design",
+        "projecturl": "https://www.figma.com/proto/c1uTQ6uC16cO7nJoB4MSLl/Aerokone?type=design&node-id=5-49&t=GPcxe43lXyvwHNy9-1&scaling=scale-down-width&page-id=0%3A1",
+        "projectimage": "/images/websites/aerokone.webp"
+      },
+      {
+        "projectname": "Echolight Design",
+        "projecturl": "https://www.figma.com/proto/Q91ybII038ENp9RTv9JLE0/Untitled?page-id=0%3A1&type=design&node-id=3-2&viewport=716%2C576%2C0.14&t=XMT2yfb5wGu7BLq4-1&scaling=scale-down-width&content-scaling=fixed",
+        "projectimage": "/images/websites/echolight.webp"
+      },
+      {
+        "projectname": "Furniture Design",
+        "projecturl": "https://www.figma.com/proto/kIWX3Fi7TKST2rUNT2ynH7/L-L-Furniture?type=design&node-id=108-317&t=4wULGw7H7UrA0mIy-1&scaling=scale-down-width&page-id=0%3A1",
+        "projectimage": "/images/websites/l&lfurniture.webp"
+      },
+      {
+        "projectname": "Realestate Design",
+        "projecturl": "https://www.figma.com/proto/01MmhjvcSiLkm6AOgJDupx/Landing-Page?type=design&node-id=1-12&t=Y3TGvHPtykzGbBbW-1&scaling=scale-down-width&page-id=0%3A1",
+        "projectimage": "/images/websites/realestateui.webp"
+      },
+      {
+        "projectname": "Financial Design",
+        "projecturl": "https://www.figma.com/proto/cRRkf6rYpDt57rtvm6HSe3/Financial--Copy-?type=design&node-id=311-3923&t=HCvXWQ2Olku6bLpZ-1&scaling=scale-down-width&page-id=0%3A1",
+        "projectimage": "/images/websites/financial-mockup.webp"
+      },
+      {
+        "projectname": "Skinology Design",
+        "projecturl": "https://www.figma.com/proto/zgmZQaKsqYYp1CLioYVPcb/skinologyfacebar?node-id=111-477&scaling=scale-down-width&t=HgA1ZAqj0pFgkehQ-1",
+        "projectimage": "/images/websites/skinology.webp"
+      },
+      {
+        "projectname": "Hughes Design",
+        "projecturl": "https://www.figma.com/proto/4Vd4dZyVJE4RjitUcKVJog/Hugh?type=design&node-id=86-8&t=swfpgE5oIH7gsx9s-1&scaling=scale-down-width&page-id=0%3A1",
+        "projectimage": "/images/websites/hughes.webp"
+      },
+      {
+        "projectname": "Poppyquiz Design",
+        "projecturl": "https://www.figma.com/proto/6RkN1MKcaZWvIWaykvpqmt/Poppyquiz?type=design&node-id=162-496&t=GdEj99g6mi7yDBtH-1&scaling=scale-down-width&page-id=0%3A1&starting-point-node-id=107%3A558",
+        "projectimage": "/images/websites/Poppyquiz.webp"
       }
     ]
   },

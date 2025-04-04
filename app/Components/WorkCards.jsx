@@ -33,7 +33,7 @@ const WorkCards = () => {
       image:
         "/images/bassmedi.webp",
       text: "BASS Medical Group",
-      stack: ["webflow"],
+      stack: ["Webflow"],
       url:'https://bass-medical-group.webflow.io/'
     },
     {
@@ -51,6 +51,30 @@ const WorkCards = () => {
       text: "Bankrate",
       stack: ["Nextjs"],
       url:'https://www.bankrate.com/'
+    },
+    {
+
+      image:
+        "/images/Estatemate.webp",
+      text: "Estatemate",
+      stack: ["Reactjs"],
+      url:'https://www.estatemate.co.za/'
+    },
+    {
+
+      image:
+        "/images/Wildjar.webp",
+      text: "Wildjar",
+      stack: ["Webflow"],
+      url:'https://www.wildjar.com/'
+    },
+    {
+
+      image:
+        "/images/livwell.webp",
+      text: "Livwell",
+      stack: ["Wordpress"],
+      url:'https://www.livwell.com/'
     },
   ];
 
