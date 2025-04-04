@@ -5,8 +5,8 @@ import { PageTransitionProvider } from "./context/allowPageAnimations";
 import "./globals.css";
 
 export const metadata = {
-  title: "Next.js Smooth Scroll",
-  description: "Smooth scrolling with Locomotive Scroll",
+  title: "Frontend Development Perfection",
+  description: "Expert in creating high-performance, user-friendly web interfaces with modern technologies.",
 };
 
 export default function RootLayout({ children }) {

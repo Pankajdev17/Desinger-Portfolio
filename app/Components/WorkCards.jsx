@@ -5,6 +5,14 @@ import React from "react";
 const WorkCards = () => {
   const cards = [
     {
+   
+      image:
+        "/images/atlas.webp",
+      text: "Atlas",
+      stack: ["Shopify","ecommerces"],
+      url:'https://atlasbars.com/'
+    },
+    {
       
       image:
         "/images/hostgenius.webp",
@@ -21,6 +29,14 @@ const WorkCards = () => {
       url:'https://thefurniturelabels.com/'
     },
     {
+
+      image:
+        "/images/bassmedi.webp",
+      text: "BASS Medical Group",
+      stack: ["webflow"],
+      url:'https://bass-medical-group.webflow.io/'
+    },
+    {
   
       image:
         "/images/unibuddy.webp",
@@ -31,26 +47,10 @@ const WorkCards = () => {
     {
 
       image:
-        "/images/bassmedi.webp",
-      text: "BASS Medical Group",
-      stack: ["webflow"],
-      url:'https://bass-medical-group.webflow.io/'
-    },
-    {
-
-      image:
         "/images/bankrate.webp",
       text: "Bankrate",
       stack: ["Nextjs"],
       url:'https://www.bankrate.com/'
-    },
-    {
-   
-      image:
-        "/images/atlas.webp",
-      text: "Atlas",
-      stack: ["Shopify","ecommerces"],
-      url:'https://atlasbars.com/'
     },
   ];
 
@@ -64,8 +64,8 @@ const WorkCards = () => {
           key={card.text}
           className="relative block group"
         >
-          <h3 className="flex items-center gap-1.5 pl-2 text-lg mb-1.5">
-            <span className="size-3 rounded-full inline-block bg-[var(--color-purple)]"></span>
+          <h3 className="flex text-white items-center gap-1.5 pl-2 text-lg mb-1.5">
+            <span className="size-3 rounded-full inline-block bg-white"></span>
             {card.text}
           </h3>
           <div className="w-full border border-dashed border-[var(--color-purple)] h-[350px] relative duration-700 rounded overflow-hidden">
@@ -81,7 +81,7 @@ const WorkCards = () => {
             {card.stack.map((st) => (
               <span
                 key={st}
-                className="border uppercase border-dashed px-3 py-0.5 text-base border-[var(--color-purple)] font-medium text-[var(--color-purple)]"
+                className="border bg-white uppercase border-dashed px-3 py-0.5 text-base border-[var(--color-purple)] font-medium text-[var(--color-purple)]"
               >
                 {st}
               </span>

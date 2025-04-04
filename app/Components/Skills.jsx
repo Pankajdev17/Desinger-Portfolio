@@ -97,9 +97,9 @@ const Skills = () => {
   return (
     <div
       ref={constraintRef}
-      className="relative z-[1] bg-[var(--bgcolor)] px-10 py-20 overflow-hidden"
+      className="relative z-[1] bg-[var(--coloroff-white)] py-10 md:py-15 px-5 md:px-10 overflow-hidden"
     >
-      <h2 className="font-[Boldonse] text-center text-white text-2xl md:text-4xl leading-[2]">
+      <h2 className="font-[Boldonse] text-center text-black text-2xl md:text-4xl leading-[2]">
         Crafted With These Tools
       </h2>
 
@@ -112,7 +112,7 @@ const Skills = () => {
                 return (
                   <td
                     key={colIndex}
-                    className="border md:border-2 border-dashed flex justify-center md:table-cell border-white py-3 w-full md:px-8"
+                    className="border md:border-2 border-dashed flex justify-center md:table-cell border-[var(--color-purple)] py-3 w-full md:px-8"
                   >
                     <motion.div
                       drag
@@ -122,7 +122,7 @@ const Skills = () => {
                       onDragEnd={() => handleDragEnd(index)}
                       animate={controlsArray.current[index]}
                       whileDrag={{ scale: 1.1, zIndex: 10 }}
-                      className="w-24 h-24 flex items-center px-3 justify-center bg-white rounded-lg cursor-grab active:cursor-grabbing pointer-events-auto"
+                      className="w-24 h-24 flex items-center px-3 justify-center bg-white border border-dashed border-[var(--color-purple)] rounded-lg cursor-grab active:cursor-grabbing pointer-events-auto"
                       style={{ touchAction: "none" }}
                     >
                       <Image

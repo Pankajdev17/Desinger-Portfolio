@@ -18,12 +18,25 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    setIsOpen(false)
-  },[pathname])
+    setIsOpen(false);
+  }, [pathname]);
+
+  // 🔄 Shake animation with pause
+  const shakeAnimation = {
+    animate: {
+      x: [-3, 3, -3, 3, 0], // Left-right shake
+      transition: {
+        repeat: Infinity, // Infinite loop
+        repeatType: "loop",
+        duration: 0.4, // 0.4 sec shake duration
+        ease: "easeInOut",
+        repeatDelay: 0.3, // 2.1 sec pause between shakes
+      },
+    },
+  };
 
   return (
     <motion.nav className="fixed size-fit md:w-[36rem] top-2 md:bottom-3 md:top-[unset] z-50 right-3 md:left-1/2 md:-translate-x-1/2">
-
       <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <AnimatePresence>
@@ -66,7 +79,13 @@ const Navbar = () => {
                         : "text-black hover:text-white hover:bg-[var(--color-purple)]"
                     }`}
                   >
-                    <link.icon className="shrink-0" />
+                    {link.text === "Contact Me" ? (
+                      <motion.div {...shakeAnimation}>
+                        <Phone className="shrink-0" />
+                      </motion.div>
+                    ) : (
+                      <link.icon className="shrink-0" />
+                    )}
                     {link.text}
                   </Link>
                 </motion.div>
@@ -95,12 +114,17 @@ const Navbar = () => {
                 : "text-black hover:text-white hover:bg-[var(--color-purple)]"
             }`}
           >
-            <link.icon className="shrink-0" />
+            {link.text === "Contact Me" ? (
+              <motion.div {...shakeAnimation}>
+                <Phone className="shrink-0" />
+              </motion.div>
+            ) : (
+              <link.icon className="shrink-0" />
+            )}
             {link.text}
           </Link>
         ))}
       </motion.div>
-
     </motion.nav>
   );
 };
