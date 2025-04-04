@@ -74,7 +74,7 @@ const WorkCards = () => {
         "/images/livwell.webp",
       text: "Livwell",
       stack: ["Wordpress"],
-      url:'https://www.livwell.com/'
+      url:'https://www.livwell.vn/'
     },
   ];
 
